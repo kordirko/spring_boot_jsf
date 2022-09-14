@@ -1,8 +1,6 @@
 package com.example.bulbator;
 
-import javax.faces.webapp.FacesServlet;
-import javax.servlet.ServletContext;
-
+import com.sun.faces.config.ConfigureListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
@@ -12,10 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.ServletContextAware;
 
-import com.sun.faces.config.ConfigureListener;
+import javax.faces.webapp.FacesServlet;
+import javax.servlet.ServletContext;
 
 @Configuration
-//@EnableAutoConfiguration(exclude={WebMvcAutoConfiguration.class, DispatcherServletAutoConfiguration.class })
 @EnableAutoConfiguration
 @ComponentScan
 public class Application implements ServletContextAware {
